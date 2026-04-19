@@ -9,6 +9,10 @@ spring:
     url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/erdtool_team}
     username: ${SPRING_DATASOURCE_USERNAME:erdtool}
     password: ${SPRING_DATASOURCE_PASSWORD:erdtool}
+    hikari:
+      maximum-pool-size: 2
+      minimum-idle: 0
+      idle-timeout: 60000
   jpa:
     hibernate:
       ddl-auto: update
